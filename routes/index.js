@@ -21,7 +21,7 @@ router.get('/movies',(req,res) =>{
                 vote_count: movieElem.vote_count, 
                 overview: movieElem.overview}
         })
-        return res.json({tableauMovies});
+        return res.json({movies: tableauMovies});
     }).catch(err => console.log('error ' + err));
 });
 
