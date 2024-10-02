@@ -16,9 +16,9 @@ router.get('/movies',(req,res) =>{
         const tableauMovies = data.results.map((movieElem, i) =>{
             console.log("une movie")
             return { title: movieElem.title, 
-                poster: `https://image.tmdb.org/t/p/original/${movieElem.poster_path}`, 
-                voteAverage: movieElem.vote_average, 
-                voteCount: movieElem.vote_count, 
+                poster_path: `https://image.tmdb.org/t/p/original/${movieElem.poster_path}`, 
+                vote_average: movieElem.vote_average, 
+                vote_count: movieElem.vote_count, 
                 overview: movieElem.overview}
         })
         return res.json({tableauMovies});
